@@ -79,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@id/cl_signUp_id"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bt_signUp_signUp"
+        app:layout_constraintBottom_toTopOf="@id/btn_signUp_signUp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp">
 
@@ -108,7 +108,7 @@
     <Button
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/bt_signUp_signUp"
+        android:id="@+id/btn_signUp_signUp"
         android:layout_marginHorizontal="30dp"
         android:text="signup"
         app:layout_constraintTop_toBottomOf="@id/cl_signUp_pw"

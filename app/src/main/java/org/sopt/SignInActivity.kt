@@ -3,6 +3,7 @@ package org.sopt
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import org.sopt.databinding.ActivitySignInBinding
@@ -14,8 +15,39 @@ class SignInActivity : AppCompatActivity() {
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        btLoginOnClickEvent()
+        btnLoginOnClickEvent()
         tvLoginSignUpOnclickEvent()
+        Log.d("mylog", "SignIn_onCreate")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("mylog", "SignIn_onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("mylog", "SignIn_onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("mylog", "SignIn_onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("mylog", "SignIn_onStop")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("mylog", "SignIn_onRestart")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("mylog", "SignIn_onDestroy")
     }
 
     private var ID = ""
@@ -29,8 +61,8 @@ class SignInActivity : AppCompatActivity() {
         // 과제에선 여기까지 만들기
     }
 
-    private fun btLoginOnClickEvent(){
-        binding.btLogin.setOnClickListener(){
+    private fun btnLoginOnClickEvent(){
+        binding.btnLogin.setOnClickListener(){
             val id = binding.etLoginId.text
             val pw = binding.etLoginPw.text
             if(id.isNullOrBlank() || pw.isNullOrBlank()){
