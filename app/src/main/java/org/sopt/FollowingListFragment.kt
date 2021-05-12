@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import org.sopt.databinding.FragmentFollowingListBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -42,7 +44,7 @@ class FollowingListFragment : Fragment() {
         followingListAdapeter.userList.addAll(
             listOf<FollowingUserInfo>(
                 FollowingUserInfo(
-                    userImage="지금은 빈 칸!",
+                    userImage = "지금은 빈 칸!",
                     userName = "한승현1"
                 ),
                 FollowingUserInfo(
@@ -58,7 +60,7 @@ class FollowingListFragment : Fragment() {
                     userName = "한승현4"
                 ),
                 FollowingUserInfo(
-                    userImage="지금은 빈 칸!",
+                    userImage = "지금은 빈 칸!",
                     userName = "한승현5"
                 ),
                 FollowingUserInfo(
@@ -87,11 +89,24 @@ class FollowingListFragment : Fragment() {
         // adapter에 모든 데이터가 변했으니 다시 그려달라고 알려주기
         followingListAdapeter.notifyDataSetChanged()
 
-
+        changeLayout()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private var changeLayoutFlag = false
+    private fun changeLayout() {
+        binding.btnFollowingListLayoutChange.setOnClickListener() {
+            if (!changeLayoutFlag) {
+                binding.rcvFollowingList.layoutManager = GridLayoutManager(activity, 2)
+                changeLayoutFlag = true
+            } else {
+                binding.rcvFollowingList.layoutManager = LinearLayoutManager(activity)
+                changeLayoutFlag = false
+            }
+        }
     }
 }

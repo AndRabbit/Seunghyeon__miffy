@@ -33,8 +33,18 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_followingList_layoutChange"
         app:layout_constraintTop_toBottomOf="@id/cl_followingList"
         tools:listitem="@layout/item_follow_user" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_followingList_layoutChange"
+        android:text="changing layout"
+        app:layout_constraintTop_toBottomOf="@id/rcv_followingList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
