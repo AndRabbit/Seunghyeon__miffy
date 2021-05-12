@@ -9,7 +9,7 @@ import android.widget.Toast
 import org.sopt.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
-    private lateinit var binding:ActivitySignUpBinding
+    private lateinit var binding: ActivitySignUpBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
@@ -50,7 +50,7 @@ class SignUpActivity : AppCompatActivity() {
         Log.d("mylog", "SignUp_onDestroy")
     }
 
-    private fun btnSignUpOnClickEvent(){
+    private fun btnSignUpOnClickEvent() {
         val name = binding.etSignUpName.text
         val id = binding.etSignUpId.text
         val pw = binding.etSignUpPw.text
@@ -61,7 +61,7 @@ class SignUpActivity : AppCompatActivity() {
                 val intent = Intent()
                 intent.putExtra("id", id.toString())
                 intent.putExtra("pw", pw.toString())
-                intent.putExtra("name",name.toString())
+                intent.putExtra("name", name.toString())
                 setResult(Activity.RESULT_OK, intent)
                 finish()
             }
