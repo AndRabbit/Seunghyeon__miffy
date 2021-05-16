@@ -1,4 +1,4 @@
-package org.sopt
+package org.sopt.presentation.home.userinfo.following
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import org.sopt.data.FollowingUserInfo
 import org.sopt.databinding.FragmentFollowingListBinding
 
 // TODO: Rename parameter arguments, choose names that match

@@ -1,4 +1,4 @@
-package org.sopt
+package org.sopt.data
 
 data class RepositoryInfo(
     val repoName: String,

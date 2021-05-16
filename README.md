@@ -9,10 +9,10 @@
     private val signUpActivityLauncher = registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
     ){
-        binding.etLoginId.setText(it.data?.getStringExtra("id"))
-        ID = it.data?.getStringExtra("id").toString()
-        PW = it.data?.getStringExtra("pw").toString()
-        NAME = it.data?.getStringExtra("name").toString()
+        binding.etLoginId.setText(it.org.sopt.data?.getStringExtra("id"))
+        ID = it.org.sopt.data?.getStringExtra("id").toString()
+        PW = it.org.sopt.data?.getStringExtra("pw").toString()
+        NAME = it.org.sopt.data?.getStringExtra("name").toString()
         // 데이터를 받아서 할 일이 들어가는 칸!
         // 과제에선 여기까지만 만들기
     }
@@ -52,7 +52,7 @@ SignUpActivity에서는 name, id, pw를 입력하고 signup 버튼을 클릭하�
 ```
 >> signup 버튼을 누르면 EditText에 입력된 name, id, pw가 모두 채워져있을 경우 putExtra를 통하여 다시 SignInActivity로 보낼 준비를 합니다.<br>
 putExtra가 끝나면, setResult 함수를 통해 RESULT_OK로 세팅하게 됩니다.<br>
-putExtra로 보낸 값 중, id는 registerForActivityResult()의 binding.etLoginId.setText(it.data?.getStringExtra("id")) 코드에 의하여 SignInActivity의 id 부분에 바로 채워집니다.<br><br>
+putExtra로 보낸 값 중, id는 registerForActivityResult()의 binding.etLoginId.setText(it.org.sopt.data?.getStringExtra("id")) 코드에 의하여 SignInActivity의 id 부분에 바로 채워집니다.<br><br>
 SignInActivity에서 HomeActivity로 넘어가는 과정에서는 homeActivityLauncher라는 것을 선언하여 사용했습니다.<br>
 ```
     private val homeActivityLauncher = registerForActivityResult(

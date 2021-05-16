@@ -1,8 +1,9 @@
-package org.sopt
+package org.sopt.presentation.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import org.sopt.data.RepositoryInfo
 import org.sopt.databinding.ItemRepositoryBinding
 
 // 1. Adapter는 RecyclerView.Adapter를 상속받는다

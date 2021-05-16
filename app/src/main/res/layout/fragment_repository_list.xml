@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RepositoryListFragment">
+    tools:context=".presentation.home.RepositoryListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

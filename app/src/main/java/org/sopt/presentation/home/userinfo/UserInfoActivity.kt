@@ -1,8 +1,10 @@
-package org.sopt
+package org.sopt.presentation.home.userinfo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import org.sopt.presentation.home.userinfo.following.FollowingListFragment
+import org.sopt.R
 import org.sopt.databinding.ActivityUserInfoBinding
 
 class UserInfoActivity : AppCompatActivity() {

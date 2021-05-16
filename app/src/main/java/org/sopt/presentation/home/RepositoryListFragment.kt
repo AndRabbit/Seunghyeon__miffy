@@ -1,13 +1,13 @@
-package org.sopt
+package org.sopt.presentation.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import org.sopt.data.RepositoryInfo
 import org.sopt.databinding.FragmentRepositoryListBinding
 
 // TODO: Rename parameter arguments, choose names that match
